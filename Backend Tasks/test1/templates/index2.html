@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Countries API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>The list of countries is: </h1>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+    }
+    </style>
+        <table>
+            <tr>
+                <strong>
+                <th>Country</th>
+                <th>Common Name</th>
+                <th>Country Code</th>
+                </strong>
+            </tr>
+            {% for i in response %}
+            <tr>
+                <td>{{i.Country}}</td>
+                <td>{{i.Slug}}</td>
+                <td>{{i.ISO2}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>
+
+<!--<ul>
+    {% for i in response %}
+    <strong><li>{{i.Country}}</li></strong>
+        <ol>
+            <li>{{i.Slug}}</li>
+        <li>{{i.ISO2}}</li>
+        </ol>
+    {% endfor %}
+    </ul>-->

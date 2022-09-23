@@ -3,27 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Covid-19 API in JavaScript</title>
+<title>Covid-19 Data</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mt-5"> Covid-19 Live Data</h1>
+        <h1 class="text-center mt-5" style="color: white; text-shadow: 5px 5px 5px red;"> Covid-19 Live Global Data</h1>
         <br><br>
-        <table class="table table-hover">
+        <style>
+            body {
+              background-image: url('covid-cells.jpg');
+              background-repeat: no-repeat;
+            }
+            </style>
+        <table class="table table-hover text1">
             <thead>
-                <tr>
+                <tr style="color: white; text-shadow: 2px 2px 2px red;">
                     <th> Total Cases</th>
                     <th> Total Deaths</th>
-                    <th> Total Recovered</th>
+                    <th> Recovered Cases</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="color: white; text-shadow: 2px 2px 2px red;">
                 <tr id="data"> </tr>
             </tbody>
         </table>
         <br>
-        <button onclick="refreshData()"class="btn btn-danger btn-block">
+        <button onclick="refreshData()" class="btn btn-danger btn-block">
             Refresh Data
         </button>
     </div>
